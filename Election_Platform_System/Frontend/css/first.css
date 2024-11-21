@@ -1,0 +1,491 @@
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20vh; /* Optional: Ensure full vertical centering */
+}
+
+.course1 {
+  	position: relative;
+/*	cursor: pointer;*/
+  	color:black;
+	font-size: 28px;
+	padding: 0.5rem 1rem;
+  	transition: color 0.25s;
+  	text-decoration: none;
+/*  	display: inline-block;*/
+}
+
+.course1::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: darkgray;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+.course1:hover{
+	color: white;
+}
+
+.course1:hover::after{
+    scale: 1 1;
+}
+
+
+
+/*candidate home page*/
+.courses-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.candidate-box {
+    background-color: #f9f9f9;
+    border: 3px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    width: 85%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.candidate-box:hover {
+    transform: scale(1.05);
+}
+
+.candidate-name {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font: sans-serif;
+    font-family: sans-serif;
+}
+
+.candidate-nam {
+    text-align: center;
+    color: lightcoral;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font: sans-serif;
+    font-family: monospace;
+}
+
+.candidate-img {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-info {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.course {
+    text-align: center;
+    font-size: 16px;
+    color: #4CAF50;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+
+.vote-button {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.vote-button:hover {
+    background-color: #45a049;
+}
+
+.vote-button:active {
+    background-color: #387a39;
+}
+
+
+/*Home page*/
+#img1{
+	text-align: center;
+	font-size: 35px;
+	background-color: grey;
+	color: white;
+	margin: 0px;
+	font-family: system-ui;
+}
+
+#img2{
+	font-size: 28px;
+	color: black;
+	margin: 35px;
+	text-align: center;
+	font-family: system-ui;
+}
+
+#img3{
+	font-size: 35px;
+	color: black;
+	margin: 35px;
+	text-align: center;
+	font-family: system-ui;
+}
+
+#img4{
+	background-color: lightgreen;
+}
+
+#img5{
+	font-size: 60px;
+	color: white;
+	margin: 35px;
+	text-align: center;
+	font-family: system-ui;
+}
+
+.container{
+	margin: 100px 0 0 200px;
+	width: 70%;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}	
+.container img{
+	width: 20%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	border: solid rgba(255, 255, 255, 1.0);
+	transition: all ease-in-out 0.5s;
+}
+.container img:hover{
+	width: 50%;
+}
+
+
+/*Top navigation*/
+.nav{
+	width: 100%;
+	display: flex;
+	align-items: left;
+	gap: 30px;
+	justify-content: center;
+	text-decoration: none;	
+}
+
+.nav a{
+	position: relative;
+	cursor: pointer;
+	color:gray;
+	font-size: 20px;
+	padding: 0.5rem 1rem;
+	transition: color 0.25s;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.nav a::after{
+	position: absolute;
+	content: "";
+	inset: 0;
+	background: darkgray;
+	scale: 1 0;
+	z-index: -1;
+	transition: 0.45s;
+	border-radius: 10px;
+}
+
+.nav a:hover{
+	color: white;
+}
+
+.nav a:hover::after{
+	scale: 1 1;
+}
+
+
+
+/*About Us Top Navigation*/
+.navi{
+	width: 100%;
+	display: flex;
+	align-items: left;
+	gap: 30px;
+	justify-content: center;
+	text-decoration: none;	
+}
+
+.navi a{
+	position: relative;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	padding: 0.5rem 1rem;
+	transition: color 0.25s;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.navi a::after{
+	position: absolute;
+	content: "";
+	inset: 0;
+	background: blueviolet;
+	scale: 1 0;
+	z-index: -1;
+	transition: 0.45s;
+	border-radius: 10px;
+}
+
+.navi a:hover{
+	color: beige;
+}
+
+.navi a:hover::after{
+	scale: 1 1;
+}
+
+#img6{
+	font-size: 20px;
+	color: black;
+	line-height: 1.5;
+	display: block;
+	text justify-content: center;
+	text-align: justify;
+}
+
+/*Courses*/
+#img7{
+	font-size: 20px;
+	color: black;
+	line-height: 1.5;
+	display: block;
+	text justify-content: center;
+	text-align: justify;
+}
+
+#img8{
+	font-size: 20px;
+	color: black;
+	line-height: 1.5;
+	display: block;
+	text justify-content: center;
+	text-align: center;
+}
+
+#img9{
+	font-size: 35px;
+	color: lightgreen;
+	line-height: 1.5;
+	display: block;
+	text-align: center;
+	font-family: monospace;
+}
+
+#img11{
+	font-family: monospace;
+	font-size: 60px;
+}
+#img10{
+	font-size: 60px;
+	color: #03a9f4;
+	margin: 35px;
+	text-align: center;
+	font-family: system-ui;
+}
+
+/*Course Links*/
+.course {
+    width: 85%;
+    display: flex;
+    align-items: left;
+    gap: 60px;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+.course {
+  	position: relative;
+	cursor: pointer;
+  	color:black;
+	font-size: 28px;
+	padding: 0.5rem 1rem;
+  	transition: color 0.25s;
+  	text-decoration: underline;
+  	display: inline-block;
+}
+
+.course::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: darkgray;
+    scale: 3 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 5px;
+}
+
+.course:hover{
+	color: white;
+}
+
+.course:hover::after{
+    scale: 1 1;
+}
+
+
+/* Hide course information initially */
+.candidate-info {
+  display: none;
+	margin-top: 5px;
+  color: black;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+
+/*contact us*/
+.contact {
+  	font-family: 'Nunito', sans-serif;
+}
+
+.input-title {
+  	margin: 0 0 5px 10px;
+  	font-size: 15px;
+  	color: #9c9c9c;
+}
+
+.input, .textinput {
+  	width: 100%;
+  	padding: 15px;
+  	border: 2px solid #eeeeee;
+  	border-radius: 4px;
+  	font-size: 16px;
+  	color: black;
+  	text-align: left;
+  	margin-bottom: 20px;
+}
+
+.input {
+  	height: 20px;
+  	width: 350px;
+}
+
+.textinput {
+  	min-height: 150px;
+}
+
+.submit-button {
+  	width: 50%;
+  	background-color: #03a9f4;
+  	color: white;
+  	height: 30px;
+  	font-size: 20px;
+  	font-weight: 700;
+  	border: none;
+  	border-radius: 4px;
+  	cursor: pointer;
+}
+
+.submit-button:hover {
+  	background-color: #0381fe;
+}
+
+.responsive-container-block {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	margin: 50px auto;
+  	max-width: 800px;
+}
+
+.wk-desk-6, .wk-ipadp-6 {
+  	width: 50%;
+}
+
+.wk-tab-12, .wk-mobile-12 {
+  	width: 100%;
+}
+
+@media (max-width: 768px) {
+  	.wk-desk-6, .wk-ipadp-6{
+    	width: 100%;
+  	}	
+}
+
+
+/* From Uiverse.io by kosedagyazilim */ 
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 4px 0px #0072ff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #0072ff;
+}
+
+.button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #0072ff, #00c6ff);
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.button:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.button:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+
+
+
+

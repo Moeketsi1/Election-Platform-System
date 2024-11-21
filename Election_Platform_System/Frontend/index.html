@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Election Platform</title>
+
+
+        <!-- Load Firebase scripts -->
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/first.css') }}">
+
+        <script src="{{ url_for('static', filename='js/firebase-config.js') }}" type="  module"></script>
+        <script src="{{ url_for('static', filename='js/main5.js') }}" type="module"></script>
+
+        <style>
+            /* Container for the courses */
+            .courses-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .course {
+                cursor: pointer;
+                color: black;
+                text-decoration: blink;
+                margin: 20px 0;
+                font-size: 20px;
+            }
+
+            .candidate-info {
+                display: none;
+                margin-top: 5px;
+                color: black;
+                font-size: 20px;
+            }
+
+            .chart-wrapper1 {
+                width: 400px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .chart-wrapper {
+                width: 600px;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .auth-section {
+                margin: 20px auto;
+                max-width: 500px;
+                text-align: center;
+            }
+
+            .auth-section input {
+                display: block;
+                margin: 10px auto;
+                padding: 10px;
+                width: 80%;
+            }
+
+            .auth-section button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+
+        </style>
+
+        <script>
+            function showCandidateInfo(courseId) {
+                let courseInfo = document.getElementById(courseId);
+                courseInfo.style.display = courseInfo.style.display === "none" ? "block" : "none";
+            }
+        </script>
+    </head>
+    <body>
+        <div style="background-image: url('{{ url_for('static', filename='assets/img/1.avif') }}'); background-repeat: no-repeat; background-position: center; background-size: cover; height: 90vh; border-radius: 20px;">
+        </div>
+
+        <pre>
+            
+
+
+
+        </pre>
+
+        <div class="courses-container">
+            <div class="candidate-box">
+                <p class="candidate-nam">Future First Coalition</p>
+                <p class="candidate-nam">[FFC]A Greener Future for ALL.</p>
+                <h2 class="candidate-name">John Smith</h2>
+                <img src="{{ url_for('static', filename='assets/img/4.jpg') }}" style="width: 75%"><br>
+                <div id="course1" class="candidate-info">
+                    <p>Sustainability: Commit to aggressive climate action by promoting 
+                    renewable energy, supporting green businesses, and setting goals to achieve carbon neutrality by 2035.</p>
+
+                    <p>Conservation: Increase funding for conservation projects to protect natural habitats and biodiversity, supporting local communities and indigenous practices.</p>
+
+                    <p>Eco-Infrastructure: Invest in eco-friendly public transportation, cycling paths, and green urban spaces to create cleaner, healthier communities.</p>
+
+                    <p>Community Engagement: Encourage environmental education and initiatives in schools, making sustainability a priority for future generations.</p>
+                </div>
+                <p class="course" onclick="showCandidateInfo('course1')">VIEW MANIFESTO</p>
+                <!-- <button type="button" id="voteButton" onclick="castVote(1)" class="button vote-button">Cast Vote</button> -->
+                <button type="button" class="vote-button" data-candidate="1">Cast Vote</button>
+            </div>
+
+            <div class="candidate-box">
+                <p class="candidate-nam">Economic Renewal Party</p>
+                <p class="candidate-nam">[ERP]Building Stronger local Economies</p>
+                <h2 class="candidate-name">Vuyo Vilakazi</h2>
+                <img src="{{ url_for('static', filename='assets/img/3.jpg') }}" style="width: 97%"><br>
+                <div id="course2" class="candidate-info">
+                    <p>Economic Growth: Support small businesses through tax relief, easier access to grants, and affordable financing options to stimulate local economies.</p>
+
+                    <p>Innovation Hub: Establish innovation centers that provide mentorship, resources, and funding for entrepreneurs to encourage business diversity and job creation.</p>
+
+                    <p>Workforce Development: Offer vocational training and skill-building programs tailored to meet the demands of the local job market.</p>
+
+                    <p>Community First: Implement policies that prioritize hiring local talent and promoting locally sourced products to keep money within the community.</p>
+                </div>
+                <p class="course" onclick="showCandidateInfo('course2')">VIEW MANIFESTO</p>
+                <!-- <button type="button" id="voteButton" onclick="castVote(2)" class="button vote-button">Cast Vote</button> -->
+                <button type="button" class="vote-button" data-candidate="2">Cast Vote</button>
+            </div>
+        </div>
+        <div class="center-container">
+            <a class="course1" href="{{ url_for('results_page') }}">View Results</a>
+        </div>      
+    </body>
+</html>
